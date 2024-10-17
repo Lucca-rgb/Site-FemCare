@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="o-que-somos.html" class="left-btn">O que somos?</a>
+        <a href="login.html" class="right-btn">login</a>
+    </div>
+
+    <div class="image-container">
+        <img src="logo-slf.png" alt="Logo da Empresa">
+    </div>
+
+    <div class="button-container">
+        <a href="noticias.html" class="btn">Notícias</a>
+        <a href="dicas.html" class="btn">Dicas</a>
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header" onclick="toggleChat()">Jessi</div>
+        <div class="chat-body hidden" id="chat-body">
+            <div id="chat-response" class="chat-response">
+                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input">
+                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+    <a href="forum.html" class="forum-button">Fórum Livre</a>
+</html>

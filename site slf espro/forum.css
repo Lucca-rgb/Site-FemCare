@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Layout branco8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex; /* Para centralizar o container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #af4ca2; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.back-button:hover {
+    background-color: #a04582; /* Cor de fundo ao passar o mouse */
+}
+
+.chat-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.chat-header {
+    background-color: #f7aac6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    background-color: white;
+    padding: 10px;
+    height: 400px; /* Ajuste a altura se necessário */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Para ocupar o espaço restante do contêiner */
+}
+
+.chat-response {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #E0BBE4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-input-container {
+    display: flex;
+    width: 100%; /* Garante que o contêiner ocupe 100% do espaço disponível */
+    margin-left: 80px;
+}
+
+.chat-input {
+    flex: 1; /* Permite que o input cresça */
+    padding: 10px;
+    border: 1px solid #e46d6d;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.send-button {
+    background-color: #ee99b8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    margin-left: 25px; /* Espaçamento entre o input e o botão */
+    min-width: 80px; /* Largura mínima para o botão */
+}
+
+.send-button:hover {
+    background-color: #db859d;
+}
+
+/* Estilos para as mensagens do bot */
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chat-message.bot {
+    align-self: flex-start; /* Alinha mensagens do bot à esquerda */
+}
+
+.chat-message.maria {
+    background-color: #ce51db; /* Rosa claro */
+}
+
+.chat-message.ana {
+    background-color: #9985a0; /* Lilás */
+}
+
+.chat-message.clara {
+    background-color: #c78bde; /* Roxo suave */
+}
+
+.chat-message.user {
+    background-color: #c390e2; /* Cor do usuário */
+    align-self: flex-end; /* Alinha mensagens do usuário à direita */
+}

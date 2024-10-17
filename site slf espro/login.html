@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-button">Voltar</a>
+
+    <div class="container">
+        <div class="container-header">Login:</div>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="window.location.href='agendamento.html'">Entrar</button>
+            </div>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header" onclick="toggleChat()">Jessi</div>
+        <div class="chat-body hidden" id="chat-body">
+            <div id="chat-response" class="chat-response">
+                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input">
+                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

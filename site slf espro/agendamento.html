@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <button class="back-button" onclick="window.location.href='login.html'">Voltar</button>
+
+    <div class="container">
+        <div class="header">Agendamento</div>
+        <form id="appointment-form">
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+            </div>
+            <div class="form-group">
+                <label for="especializacao">Especialização:</label>
+                <select id="especializacao" name="especializacao" required>
+                    <option value="" disabled selected>Selecione uma especialização</option>
+                    <option value="ginecologia">Ginecologia</option>
+                    <option value="obstetricia">Obstetrícia</option>
+                    <option value="endocrinologia-reprodutiva">Endocrinologia Reprodutiva</option>
+                    <option value="oncologia-ginecologica">Oncologia Ginecológica</option>
+                    <option value="mastologia">Mastologia</option>
+                    <option value="urologia-feminina">Urologia Feminina</option>
+                    <option value="medicina-preventiva">Medicina Preventiva</option>
+                    <option value="dermatologista">Dermatologista</option>
+                    <option value="psicologia">Psicologia</option>
+                    <option value="cirurgia-plastica">Cirurgia Plástica (CRS) </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" onchange="filterUBS()">
+                    <option value="" disabled selected>Selecione um estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ubs">UBS:</label>
+                <select id="ubs">
+                    <option value="" disabled selected>Selecione uma UBS</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mes">Mês:</label>
+                <select id="mes" name="mes" required>
+                    <option value="" disabled selected>Selecione um mês</option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ano">Ano:</label>
+                <select id="ano" name="ano" required>
+                    <option value="" disabled selected>Selecione um ano</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="datas-disponiveis">Datas Disponíveis:</label>
+                <select id="datas-disponiveis" name="datas-disponiveis" required>
+                    <option value="" disabled selected>Selecione uma data</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>            
+            <div class="form-group">
+                <label for="horarios">Horários:</label>
+                <select id="horarios" name="horarios" required>
+                    <option value="" disabled selected>Selecione um horário</option>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="confirmAgendamento()">Confirmar agendamento</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header" onclick="toggleChat()">Jessi</div>
+        <div class="chat-body hidden" id="chat-body">
+            <div id="chat-response" class="chat-response">
+                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input">
+                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>

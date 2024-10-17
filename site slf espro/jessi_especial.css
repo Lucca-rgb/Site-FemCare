@@ -1,0 +1,167 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Layout branco7.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem ao tamanho da tela */
+}
+
+.header {
+    background-color: rgba(147, 112, 219, 0.8); /* Fundo com transparência */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Permite posicionar elementos dentro da header */
+    z-index: 1; /* Garante que a header fique acima do fundo */
+}
+
+.back-button {
+    position: absolute;
+    left: 20px; /* Posição no canto superior direito */
+    top: 20px;
+    background-color: #7644d8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1; /* Garante que o botão fique acima do fundo */
+    width: 130px;
+    height: 45px;
+}
+
+.back-button:hover {
+    background-color: #dba0e7;
+}
+
+h1 {
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #926fda;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color:#ffffff;
+}
+
+h2 {
+    text-align: center;
+    background-color: #926fda;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    color: #ffffff;
+    background-color: #926fda;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button {
+    background-color: #835bd3;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botão ocupa toda a largura do formulário */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+    background-color: #6d38d6; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="idade"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    background-color: white;
+    color: #000000;
+}
+
+/* Estilo para inputs em foco */
+input[type="text"]:focus,
+input[type="idade"]:focus,
+textarea:focus {
+    border-color: #4b49cc; /* Cor ao focar no campo */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo do botão de envio */
+button {
+    background-color: #5406f0;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botão ocupa toda a largura do formulário */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    height: 40px;
+}
+
+button:hover {
+    background-color: #cd84db; /* Tom mais escuro ao passar o mouse */
+}
+
+#confirmation {
+    display: none; /* Inicialmente oculto */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(194, 3, 162);
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+}
+
+/* Estilo para a aba de contato */
+.contact-info {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background: rgba(201, 84, 224, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: auto; /* Ajusta a altura automaticamente */
+}
+
+.contact-info h3,
+.contact-info h5 {
+    margin-top: 0;
+    color: black; /* Texto preto para melhor legibilidade */
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 14px;
+    color: black; /* Texto preto para melhor legibilidade */
+}

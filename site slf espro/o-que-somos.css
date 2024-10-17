@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Layout branco2.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+.container {
+    background-color: rgba(147, 112, 219, 0.8); /* Cor lilás semi-transparente */
+    padding: 90px;
+    margin: 10px;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
+}
+.header {
+    text-align: center;
+}
+.header h1 {
+    color: white; /* Cor branca para o texto */
+    margin: -600;
+    font-size: 24px;
+}
+/* Estilo para o botão "Menu" */
+.header .left-btn {
+    background-color: #9370DB;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Botão circular */
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado */
+    top: 10px;
+    left: -40px; /* Parte do botão fica escondida */
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilo para o conteúdo */
+.content {
+    color: white; /* Texto na cor branca */
+    font-size: 18px;
+    line-height: 1.6;
+}
+.content p {
+    margin: 0 0 10px;
+}
+.content span {
+    display: block;
+    margin-bottom: 10px;
+}
+/* Estilo para os ícones */
+.content span::before {
+    content: '🌸 ';
+    margin-right: 10px;
+}
+/* Estilos do chat */
+.chat-container {
+    position: fixed; /* Fixa o chat na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    width: 80px; /* Largura inicial do chat circular */
+    height: 80px; /* Altura inicial do chat circular */
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f7aac6; /* Cor do cabeçalho */
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease; /* Transição suave */
+}
+
+.chat-container.expanded {
+    width: 400px; /* Largura quando expandido */
+    height: 500px; /* Altura quando expandido */
+    border-radius: 10px; /* Bordas arredondadas quando expandido */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+
+.chat-header {
+    background-color: #f7aac6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    background-color: white; /* Fundo branco */
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-response {
+    flex: 1;
+    overflow-y: auto; /* Adiciona rolagem */
+    background-color: #E0BBE4; /* Fundo roxo para as mensagens */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chat-message.bot {
+    background-color: #E0E0E0; /* Fundo para mensagens do bot */
+    align-self: flex-start;
+}
+
+.chat-message.user {
+    background-color: #c390e2; /* Roxo suave para mensagens do usuário */
+    align-self: flex-end;
+}
+
+.chat-input-container {
+    display: flex;
+    margin-top: auto; /* Para posicionar na parte inferior */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e46d6d;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #ee99b8; /* Rosa pastel */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: white; /* Texto branco no botão */
+}
+
+.send-button:hover {
+    background-color: #db859d; /* Cor do botão ao passar o mouse */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}

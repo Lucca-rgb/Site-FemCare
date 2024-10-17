@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Layout branco3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.356);
+    z-index: -1;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80vw;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #f7aac6;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color: #f7aac6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 190px;
+}
+
+.form-group button:hover {
+    background-color: #d8a2b1;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f8c6d8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #d8a2b1;
+}
+
+.chat-container {
+    position: fixed; /* Fixa o chat na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    width: 80px; /* Largura inicial do chat circular */
+    height: 80px; /* Altura inicial do chat circular */
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f7aac6; /* Cor do cabeçalho */
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease; /* Transição suave */
+}
+
+.chat-container.expanded {
+    width: 400px; /* Largura quando expandido */
+    height: 500px; /* Altura quando expandido */
+    border-radius: 10px; /* Bordas arredondadas quando expandido */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+
+.chat-header {
+    background-color: #f7aac6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    background-color: white; /* Fundo branco */
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-response {
+    flex: 1;
+    overflow-y: auto; /* Adiciona rolagem */
+    background-color: #E0BBE4; /* Fundo roxo para as mensagens */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chat-message.bot {
+    background-color: #E0E0E0; /* Fundo para mensagens do bot */
+    align-self: flex-start;
+}
+
+.chat-message.user {
+    background-color: #c390e2; /* Roxo suave para mensagens do usuário */
+    align-self: flex-end;
+}
+
+.chat-input-container {
+    display: flex;
+    margin-top: auto; /* Para posicionar na parte inferior */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e46d6d;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #ee99b8; /* Rosa pastel */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: white; /* Texto branco no botão */
+}
+
+.send-button:hover {
+    background-color: #db859d; /* Cor do botão ao passar o mouse */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}

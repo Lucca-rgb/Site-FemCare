@@ -1,0 +1,252 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Layout branco6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1366px;
+    height: 650px;
+    position: relative;
+}
+
+.help-button {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: #f8c8dc; /* Rosa pastel */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.help-button:hover {
+    background-color: #e2a8b8; /* Cor ao passar o mouse */
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+}
+
+.image-container:hover .tooltip {
+    display: block;
+}
+
+.header {
+    background-color: #f8c8dc;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    color: #fff;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.95;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-button {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-button:active {
+    background-color: #e2a8b8;
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1; /* Coloca o modal sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Fundo do modal */
+    margin: 15% auto; /* Espaço em cima e embaixo */
+    padding: 20px;
+    border: 1px solid #888; /* Borda do modal */
+    width: 300px; /* Largura do modal */
+    text-align: center;
+}
+
+.close {
+    color: #aaa; /* Cor do botão de fechar */
+    float: right; /* Alinha à direita */
+    font-size: 28px; /* Tamanho do botão */
+    font-weight: bold; /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cor ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Muda o cursor */
+}
+
+/* Estilos do chat */
+.chat-container {
+    position: fixed; /* Fixa o chat na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    width: 80px; /* Largura inicial do chat circular */
+    height: 80px; /* Altura inicial do chat circular */
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f7aac6; /* Cor do cabeçalho */
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease; /* Transição suave */
+}
+
+.chat-container.expanded {
+    width: 400px; /* Largura quando expandido */
+    height: 500px; /* Altura quando expandido */
+    border-radius: 10px; /* Bordas arredondadas quando expandido */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+
+.chat-header {
+    background-color: #f7aac6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    background-color: white; /* Fundo branco */
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-response {
+    flex: 1;
+    overflow-y: auto; /* Adiciona rolagem */
+    background-color: #E0BBE4; /* Fundo roxo para as mensagens */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chat-message.bot {
+    background-color: #E0E0E0; /* Fundo para mensagens do bot */
+    align-self: flex-start;
+}
+
+.chat-message.user {
+    background-color: #c390e2; /* Roxo suave para mensagens do usuário */
+    align-self: flex-end;
+}
+
+.chat-input-container {
+    display: flex;
+    margin-top: auto; /* Para posicionar na parte inferior */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e46d6d;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #ee99b8; /* Rosa pastel */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: white; /* Texto branco no botão */
+}
+
+.send-button:hover {
+    background-color: #db859d; /* Cor do botão ao passar o mouse */
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
