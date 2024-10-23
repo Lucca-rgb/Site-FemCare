@@ -34,7 +34,7 @@
 
 🌟 With these improvements, our goal is to provide a more pleasant and efficient experience for our users, making the scheduling process more accessible and chat interactions more satisfactory. We are committed to listening to our users' feedback and continually enhancing the site.
 
-[Leia em português](https://github.com/Mariana-rgb/Site-FemCare/edit/main/README.md#introdu%C3%A7%C3%A3o)
+[Leia em português](https://github.com/Mariana-rgb/Site-FemCare?tab=readme-ov-file#introdu%C3%A7%C3%A3o)
 
 ---
 
@@ -63,7 +63,7 @@
 
 🌟 Com essas melhorias, nosso objetivo é proporcionar uma experiência mais agradável e eficiente para nossos usuários, tornando o processo de agendamento mais acessível e as interações no chat mais satisfatórias. Estamos comprometidos em ouvir o feedback dos nossos usuários e aprimorar continuamente o site.
 
-[Read in English](https://github.com/Mariana-rgb/Site-FemCare/edit/main/README.md#introduction)
+[Read in English](https://github.com/Mariana-rgb/Site-FemCare?tab=readme-ov-file#introduction)
 
 ## Tools Used / Ferramentas utilizadas
 
