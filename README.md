@@ -1,11 +1,9 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00BFFF&height=120&section=header" alt="Description" />
 </div>
-<div align="center">
   <h1 align="center">
     Site FemCare
   </h1>
-</div>
 
 <p align="center">
   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge" alt="Badge em Desenvolvimento">
