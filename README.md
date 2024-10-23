@@ -1,10 +1,13 @@
-<div align="center">
-  <h1>Site FemCare</h1>
-</div>
+<h1 align="center">Site FemCare </h1>
 
-<p align="center">
+<div align="center">  
+  <a href="https://www.flaticon.com/br/icones-gratis/enfermeira" title="enfermeira ícones">
+    <img align="center" alt="Enfermeira ícone" height="100" src="https://cdn-icons-png.flaticon.com/128/4850/4850909.png" title="Enfermeira ícone">
+  </a>
+</div>
+<div align="center">
   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge" alt="Badge em Desenvolvimento">
-</p>
+</div>
 
 ## Introduction
 
