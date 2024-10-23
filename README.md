@@ -1,54 +1,77 @@
-# Site-FemCare!
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00BFFF&height=120&section=header" alt="Description" />
+</div>
+<div align="center">
+  <h1 align="center">
+    Site FemCare
+  </h1>
+</div>
 
-## English Version
-👩‍⚕️ Site-FemCare!
+<p align="center">
+  <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge" alt="Badge em Desenvolvimento">
+</p>
 
-Site Improvements: Interface and Chat
+## Introduction
+
+### Site Improvements: Interface and Chat
 
 📚 Recently, we implemented a series of significant improvements on our website, focusing on both user interface and chat functionality.
 
-User Interface:
+### User Interface
 
-Modernized Design: The new interface features a cleaner and more intuitive design, facilitating user navigation and interaction.
-Enhanced Appointment Form: The form is now clearer, with organized fields and informative labels, making the scheduling process simpler and quicker.
-Responsive Date and Time Selectors: We added more responsive dropdown menus for selecting dates and times, allowing users to make selections quickly.
-Chat Functionality:
+- **Modernized Design:** The new interface features a cleaner and more intuitive design, facilitating user navigation and interaction.
+- **Enhanced Appointment Form:** The form is now clearer, with organized fields and informative labels, simplifying the scheduling process.
+- **Responsive Date and Time Selectors:** We added more responsive dropdown menus for selecting dates and times, allowing users to make selections quickly.
 
-Interactive Virtual Assistant: The chat now has a smarter virtual assistant capable of understanding and responding to a wider range of questions related to scheduling and health.
-Personalized Responses: The chat provides personalized responses based on common user inquiries, making interactions more relevant and useful.
-Quick Access to Support: We improved access to information about common issues, such as registration, password, and appointments, ensuring users can find help quickly.
-Enhanced Navigation:
+### Chat Functionality
 
-Visible Back Button: The "Back" button has been repositioned to make it easier to return to previous pages.
-Clear Navigation Structure: The arrangement of elements on the page has been optimized for smoother and more intuitive navigation.
-🌟 With these improvements, our goal is to provide a more pleasant and efficient experience for our users, making the scheduling process more accessible and chat interactions more satisfactory. We are committed to listening to our users' feedback and continually improving the site.
+- **Interactive Virtual Assistant:** The chat now includes a smarter virtual assistant capable of understanding and responding to a wider range of questions related to scheduling and health.
+- **Personalized Responses:** The chat provides tailored responses based on common user inquiries, making interactions more relevant and useful.
+- **Quick Access to Support:** We improved access to information about common issues, such as registration, password management, and appointments, ensuring users can find help quickly.
 
-[Leia em português](#versão-em-português)
+### Enhanced Navigation
 
-<hr>
+- **Visible Back Button:** The "Back" button has been repositioned to make it easier to return to previous pages.
+- **Clear Navigation Structure:** The arrangement of elements on the page has been optimized for smoother and more intuitive navigation.
 
-## Versão em Português
+🌟 With these improvements, our goal is to provide a more pleasant and efficient experience for our users, making the scheduling process more accessible and chat interactions more satisfactory. We are committed to listening to our users' feedback and continually enhancing the site.
 
-👩‍⚕️ Site-FemCare!
+[Leia em português](https://github.com/Mariana-rgb/Site-FemCare/edit/main/README.md#introdu%C3%A7%C3%A3o)
 
-Melhorias no Site: Interface e Chat
+---
 
-📚 Recentemente, implementamos uma série de melhorias significativas no nosso site, focando tanto na interface do usuário quanto na funcionalidade do chat.
+## Introdução
 
-Interface do Usuário:
+### Melhorias no Site: Interface e Chat
 
-Design Modernizado: A nova interface apresenta um design mais limpo e intuitivo, facilitando a navegação e a interação do usuário.
-Formulário de Agendamento Aprimorado: O formulário agora é mais claro, com campos organizados e rótulos informativos, tornando o processo de agendamento mais simples e rápido.
-Selecionadores de Data e Hora: Adicionamos menus suspensos mais responsivos para a escolha de datas e horários, permitindo que os usuários façam seleções rapidamente.
-Funcionalidade do Chat:
+📚 Recentemente, implementamos uma série de melhorias significativas em nosso site, com foco tanto na interface do usuário quanto na funcionalidade de chat.
 
-Assistente Virtual Interativo: O chat agora possui um assistente virtual mais inteligente, capaz de entender e responder a uma variedade maior de perguntas relacionadas ao agendamento e à saúde.
-Respostas Personalizadas: O chat fornece respostas personalizadas com base nas dúvidas comuns dos usuários, tornando a interação mais relevante e útil.
-Acesso Rápido ao Suporte: Melhoramos o acesso a informações sobre problemas comuns, como cadastro, senha e agendamentos, garantindo que os usuários encontrem ajuda rapidamente.
-Navegação Aprimorada:
+### Interface do Usuário
 
-Botão de Retorno Visível: O botão de "Voltar" foi reposicionado para facilitar o retorno a páginas anteriores.
-Estrutura de Navegação Clara: A disposição dos elementos na página foi otimizada para uma navegação mais fluida e intuitiva.
-🌟 Com essas melhorias, nosso objetivo é proporcionar uma experiência mais agradável e eficiente para nossos usuários, tornando o processo de agendamento mais acessível e as interações no chat mais satisfatórias. Estamos comprometidos em ouvir o feedback dos nossos usuários e continuar aprimorando o site.
+- **Design Modernizado:** A nova interface apresenta um design mais limpo e intuitivo, facilitando a navegação e a interação dos usuários.
+- **Formulário de Agendamento Aprimorado:** O formulário agora está mais claro, com campos organizados e rótulos informativos, simplificando o processo de agendamento.
+- **Seletores de Data e Hora Responsivos:** Adicionamos menus suspensos mais responsivos para a seleção de datas e horários, permitindo que os usuários façam escolhas rapidamente.
 
-[Read in English](#english-version)
+### Funcionalidade do Chat
+
+- **Assistente Virtual Interativo:** O chat agora conta com um assistente virtual mais inteligente, capaz de entender e responder a uma gama mais ampla de perguntas relacionadas a agendamentos e saúde.
+- **Respostas Personalizadas:** O chat fornece respostas personalizadas com base nas perguntas comuns dos usuários, tornando as interações mais relevantes e úteis.
+- **Acesso Rápido ao Suporte:** Melhoramos o acesso a informações sobre questões comuns, como registro, gerenciamento de senhas e agendamentos, garantindo que os usuários encontrem ajuda rapidamente.
+
+### Navegação Aprimorada
+
+- **Botão de Voltar Visível:** O botão "Voltar" foi reposicionado para facilitar o retorno a páginas anteriores.
+- **Estrutura de Navegação Clara:** A disposição dos elementos na página foi otimizada para uma navegação mais suave e intuitiva.
+
+🌟 Com essas melhorias, nosso objetivo é proporcionar uma experiência mais agradável e eficiente para nossos usuários, tornando o processo de agendamento mais acessível e as interações no chat mais satisfatórias. Estamos comprometidos em ouvir o feedback dos nossos usuários e aprimorar continuamente o site.
+
+[Read in English](https://github.com/Mariana-rgb/Site-FemCare/edit/main/README.md#introduction)
+
+## Tools Used / Ferramentas utilizadas
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode)](https://skillicons.dev)
+
+## Authors /  Autores
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/176588930?v=4" width=115><br><sub>Mariana Torres</sub>](https://github.com/Mariana-rgb) |
+| :---: |
