@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00BFFF&height=120&section=header" alt="Description" />
-</div>
-  <h1 align="center">
+ <h1 align="center">
     Site FemCare
   </h1>
 
