@@ -24,7 +24,7 @@ body {
 }
 
 .back-button:hover {
-    background-color: #a04582; /* Cor de fundo ao passar o mouse */
+    background-color: #962871; /* Cor de fundo ao passar o mouse */
 }
 
 .chat-container {
@@ -56,7 +56,7 @@ body {
 .chat-response {
     flex: 1;
     overflow-y: auto;
-    background-color: #E0BBE4;
+    background-color: #f1efef;
     padding: 10px;
     border-radius: 5px;
 }
@@ -103,18 +103,18 @@ body {
 }
 
 .chat-message.maria {
-    background-color: #ce51db; /* Rosa claro */
+    background-color: #e5a6e7; /* Rosa claro */
 }
 
 .chat-message.ana {
-    background-color: #9985a0; /* Lilás */
+    background-color: #e695d1; /* Lilás */
 }
 
 .chat-message.clara {
-    background-color: #c78bde; /* Roxo suave */
+    background-color: #d398eb; /* Roxo suave */
 }
 
 .chat-message.user {
-    background-color: #c390e2; /* Cor do usuário */
+    background-color: #d0a8e9; /* Cor do usuário */
     align-self: flex-end; /* Alinha mensagens do usuário à direita */
 }
