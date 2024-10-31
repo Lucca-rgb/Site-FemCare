@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento</title>
-    <link rel="stylesheet" href="agendamento.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva -->
+    <title>Agendamento</title> <!-- Título da página -->
+    <link rel="stylesheet" href="agendamento.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
 
+    <!-- Botão para voltar à página de login -->
     <button class="back-button" onclick="window.location.href='login.html'">Voltar</button>
 
+    <!-- Contêiner principal do formulário -->
     <div class="container">
-        <div class="header">Agendamento</div>
-        <form id="appointment-form">
+        <div class="header">Agendamento</div> <!-- Cabeçalho do formulário -->
+        <form id="appointment-form"> <!-- Formulário de agendamento -->
             <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" required>
+                <label for="cep">CEP:</label> <!-- Rótulo do campo CEP -->
+                <input type="text" id="cep" name="cep" required> <!-- Campo de entrada para CEP -->
             </div>
             <div class="form-group">
-                <label for="especializacao">Especialização:</label>
-                <select id="especializacao" name="especializacao" required>
-                    <option value="" disabled selected>Selecione uma especialização</option>
+                <label for="especializacao">Especialização:</label> <!-- Rótulo do campo especialização -->
+                <select id="especializacao" name="especializacao" required> <!-- Campo de seleção para especialização -->
+                    <option value="" disabled selected>Selecione uma especialização</option> <!-- Opção padrão -->
                     <option value="ginecologia">Ginecologia</option>
                     <option value="obstetricia">Obstetrícia</option>
                     <option value="endocrinologia-reprodutiva">Endocrinologia Reprodutiva</option>
@@ -30,13 +32,13 @@
                     <option value="medicina-preventiva">Medicina Preventiva</option>
                     <option value="dermatologista">Dermatologista</option>
                     <option value="psicologia">Psicologia</option>
-                    <option value="cirurgia-plastica">Cirurgia Plástica (CRS) </option>
+                    <option value="cirurgia-plastica">Cirurgia Plástica (CRS)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="estado">Estado:</label>
-                <select id="estado" onchange="filterUBS()">
-                    <option value="" disabled selected>Selecione um estado</option>
+                <label for="estado">Estado:</label> <!-- Rótulo do campo estado -->
+                <select id="estado" onchange="filterUBS()"> <!-- Campo de seleção para estado -->
+                    <option value="" disabled selected>Selecione um estado</option> <!-- Opção padrão -->
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="DF">Distrito Federal</option>
@@ -47,15 +49,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="ubs">UBS:</label>
-                <select id="ubs">
-                    <option value="" disabled selected>Selecione uma UBS</option>
+                <label for="ubs">UBS:</label> <!-- Rótulo do campo UBS -->
+                <select id="ubs"> <!-- Campo de seleção para UBS -->
+                    <option value="" disabled selected>Selecione uma UBS</option> <!-- Opção padrão -->
                 </select>
             </div>
             <div class="form-group">
-                <label for="mes">Mês:</label>
-                <select id="mes" name="mes" required>
-                    <option value="" disabled selected>Selecione um mês</option>
+                <label for="mes">Mês:</label> <!-- Rótulo do campo mês -->
+                <select id="mes" name="mes" required> <!-- Campo de seleção para mês -->
+                    <option value="" disabled selected>Selecione um mês</option> <!-- Opção padrão -->
                     <option value="01">Janeiro</option>
                     <option value="02">Fevereiro</option>
                     <option value="03">Março</option>
@@ -71,18 +73,18 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="ano">Ano:</label>
-                <select id="ano" name="ano" required>
-                    <option value="" disabled selected>Selecione um ano</option>
+                <label for="ano">Ano:</label> <!-- Rótulo do campo ano -->
+                <select id="ano" name="ano" required> <!-- Campo de seleção para ano -->
+                    <option value="" disabled selected>Selecione um ano</option> <!-- Opção padrão -->
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
                     <option value="2026">2026</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="datas-disponiveis">Datas Disponíveis:</label>
-                <select id="datas-disponiveis" name="datas-disponiveis" required>
-                    <option value="" disabled selected>Selecione uma data</option>
+                <label for="datas-disponiveis">Datas Disponíveis:</label> <!-- Rótulo do campo datas disponíveis -->
+                <select id="datas-disponiveis" name="datas-disponiveis" required> <!-- Campo de seleção para datas -->
+                    <option value="" disabled selected>Selecione uma data</option> <!-- Opção padrão -->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -117,9 +119,9 @@
                 </select>
             </div>            
             <div class="form-group">
-                <label for="horarios">Horários:</label>
-                <select id="horarios" name="horarios" required>
-                    <option value="" disabled selected>Selecione um horário</option>
+                <label for="horarios">Horários:</label> <!-- Rótulo do campo horários -->
+                <select id="horarios" name="horarios" required> <!-- Campo de seleção para horários -->
+                    <option value="" disabled selected>Selecione um horário</option> <!-- Opção padrão -->
                     <option value="07:00">07:00</option>
                     <option value="08:00">08:00</option>
                     <option value="09:00">09:00</option>
@@ -136,24 +138,25 @@
                 </select>
             </div>
             <div class="form-group">
-                <button type="button" onclick="confirmAgendamento()">Confirmar agendamento</button>
+                <button type="button" onclick="confirmAgendamento()">Confirmar agendamento</button> <!-- Botão para confirmar o agendamento -->
             </div>
         </form>
     </div>
 
+    <!-- Contêiner para o chat -->
     <div class="chat-container" id="chat-container">
-        <div class="chat-header" onclick="toggleChat()">Jessi</div>
-        <div class="chat-body hidden" id="chat-body">
+        <div class="chat-header" onclick="toggleChat()">Jessi</div> <!-- Cabeçalho do chat -->
+        <div class="chat-body hidden" id="chat-body"> <!-- Corpo do chat, inicialmente oculto -->
             <div id="chat-response" class="chat-response">
-                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div>
+                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div> <!-- Mensagem inicial do bot -->
             </div>
-            <div class="chat-input-container">
-                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input">
-                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            <div class="chat-input-container"> <!-- Contêiner para a entrada de chat -->
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input"> <!-- Campo de entrada de texto -->
+                <button class="send-button" onclick="sendMessage()">Enviar</button> <!-- Botão para enviar a mensagem -->
             </div>
         </div>
     </div>
 
-    <script src="agendamento.js"></script>
+    <script src="agendamento.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
