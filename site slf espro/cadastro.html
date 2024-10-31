@@ -1,69 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Declara o tipo do documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para responsividade -->
+    <title>Cadastro</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="cadastro.css"> <!-- Link para o arquivo CSS externo -->
 </head>
 <body>
 
-    <a href="login.html" class="back-button">Voltar</a>
+    <a href="login.html" class="back-button">Voltar</a> <!-- Link para voltar à página de login -->
 
-    <div class="container">
-        <div class="header">Cadastre seus dados abaixo:</div>
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required>
+    <div class="container"> <!-- Contêiner principal para o formulário -->
+        <div class="header">Cadastre seus dados abaixo:</div> <!-- Cabeçalho do contêiner -->
+        <form id="registrationForm"> <!-- Formulário com um ID para manipulação via JavaScript -->
+            <div class="form-group"> <!-- Grupo de formulário para CPF -->
+                <label for="cpf">CPF:</label> <!-- Rótulo para o campo CPF -->
+                <input type="text" id="cpf" name="cpf" required> <!-- Campo de entrada para CPF -->
             </div>
-            <div class="form-group">
-                <label for="sus">Cartão do SUS:</label>
-                <input type="text" id="sus" name="sus" required>
+            <div class="form-group"> <!-- Grupo de formulário para Cartão do SUS -->
+                <label for="sus">Cartão do SUS:</label> <!-- Rótulo para o campo SUS -->
+                <input type="text" id="sus" name="sus" required> <!-- Campo de entrada para o Cartão do SUS -->
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <div class="form-group"> <!-- Grupo de formulário para Email -->
+                <label for="email">Email:</label> <!-- Rótulo para o campo de email -->
+                <input type="email" id="email" name="email" required> <!-- Campo de entrada para email -->
             </div>
-            <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" required>
+            <div class="form-group"> <!-- Grupo de formulário para CEP -->
+                <label for="cep">CEP:</label> <!-- Rótulo para o campo CEP -->
+                <input type="text" id="cep" name="cep" required> <!-- Campo de entrada para CEP -->
             </div>
-            <div class="form-group">
-                <label for="confirmar-senha">Senha:</label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+            <div class="form-group"> <!-- Grupo de formulário para Senha -->
+                <label for="confirmar-senha">Senha:</label> <!-- Rótulo para o campo de senha -->
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required> <!-- Campo de entrada para senha -->
             </div>
-            <div class="form-group">
-                <label for="numero">Número:</label>
-                <input type="text" id="numero" name="numero" required>
+            <div class="form-group"> <!-- Grupo de formulário para Número -->
+                <label for="numero">Número:</label> <!-- Rótulo para o campo número -->
+                <input type="text" id="numero" name="numero" required> <!-- Campo de entrada para número -->
             </div>
-            <div class="form-group">
-                <label for="senha">Confirmar senha:</label>
-                <input type="password" id="senha" name="senha" required>
+            <div class="form-group"> <!-- Grupo de formulário para Confirmar Senha -->
+                <label for="senha">Confirmar senha:</label> <!-- Rótulo para o campo de confirmação de senha -->
+                <input type="password" id="senha" name="senha" required> <!-- Campo de entrada para confirmação de senha -->
             </div>
-            <div class="form-group">
-                <label for="palavra-chave">Palavara-Chave:</label>
-                <input type="text" id="chave" name="chave" required>
+            <div class="form-group"> <!-- Grupo de formulário para Palavra-Chave -->
+                <label for="palavra-chave">Palavara-Chave:</label> <!-- Rótulo para o campo palavra-chave -->
+                <input type="text" id="chave" name="chave" required> <!-- Campo de entrada para palavra-chave -->
             </div>
-            <div class="form-group">
-                <button type="submit">Cadastrar</button>
+            <div class="form-group"> <!-- Grupo de formulário para o botão de cadastro -->
+                <button type="submit">Cadastrar</button> <!-- Botão para enviar o formulário -->
             </div>
         </form>
     </div>
 
-    <div class="chat-container" id="chat-container">
-        <div class="chat-header" onclick="toggleChat()">Jessi</div>
-        <div class="chat-body hidden" id="chat-body">
-            <div id="chat-response" class="chat-response">
-                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div>
+    <div class="chat-container" id="chat-container"> <!-- Contêiner do chat -->
+        <div class="chat-header" onclick="toggleChat()">Jessi</div> <!-- Cabeçalho do chat que, ao clicar, chama a função toggleChat() -->
+        <div class="chat-body hidden" id="chat-body"> <!-- Corpo do chat, inicialmente oculto -->
+            <div id="chat-response" class="chat-response"> <!-- Área de respostas do chat -->
+                <div class="chat-message bot">Olá! Como posso ajudar você hoje? 😊</div> <!-- Mensagem inicial do bot -->
             </div>
-            <div class="chat-input-container">
-                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input">
-                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            <div class="chat-input-container"> <!-- Contêiner para a entrada de mensagens -->
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="chat-input"> <!-- Campo de entrada para mensagem -->
+                <button class="send-button" onclick="sendMessage()">Enviar</button> <!-- Botão para enviar a mensagem, chama a função sendMessage() -->
             </div>
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="login.js"></script> <!-- Link para o arquivo JavaScript externo -->
 </body>
 </html>
