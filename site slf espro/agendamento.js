@@ -1,6 +1,8 @@
+// Adiciona um listener para o evento de submit no formulário de agendamento
 document.getElementById('appointment-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão de recarregar a página ao enviar o formulário
 
+    // Captura os valores dos campos do formulário
     const estado = document.getElementById('estado').value;
     const ubs = document.getElementById('ubs').value;
     const especialidade = document.getElementById('especialidade').value;
@@ -8,15 +10,22 @@ document.getElementById('appointment-form').addEventListener('submit', function(
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
 
+    // Cria um objeto de agendamento com os valores coletados
     const appointment = { estado, ubs, especialidade, month, date, time };
+    // Recupera os agendamentos do localStorage ou inicializa um novo array se não houver
     let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+    // Adiciona o novo agendamento ao array
     appointments.push(appointment);
+    // Armazena o array atualizado no localStorage
     localStorage.setItem('appointments', JSON.stringify(appointments));
 
+    // Exibe um alerta de confirmação com os detalhes do agendamento
     alert(`Agendamento realizado com sucesso!\nUBS: ${ubs}\nEspecialidade: ${especialidade}\nData: ${date} ${month}\nHora: ${time}`);
-    window.location.href = 'tela-agendamento.html'; // Redireciona de volta para a tela de agendamento
+    // Redireciona para a tela de agendamento
+    window.location.href = 'tela-agendamento.html'; 
 });
 
+// Dados das UBSs organizados por estado
 const ubsData = {
     SP: [
         { value: "ubs1", name: "UBS Vila Mariana - São Paulo" },
@@ -50,6 +59,7 @@ const ubsData = {
     ]
 };
 
+// Função para filtrar as UBSs com base no estado selecionado
 function filterUBS() {
     const estado = document.getElementById('estado').value;
     const ubsSelect = document.getElementById('ubs');
@@ -57,6 +67,7 @@ function filterUBS() {
     // Limpa as opções existentes
     ubsSelect.innerHTML = '<option value="" disabled selected>Selecione uma UBS</option>';
 
+    // Se o estado tiver UBSs cadastradas, adiciona as opções ao select
     if (estado && ubsData[estado]) {
         ubsData[estado].forEach(ubs => {
             const option = document.createElement('option');
@@ -73,6 +84,7 @@ function filterUBS() {
     }
 }
 
+// Função para definir o dia selecionado em um calendário
 function setSelectedDay(day) {
     const days = document.querySelectorAll('.day');
     days.forEach(d => {
@@ -81,12 +93,14 @@ function setSelectedDay(day) {
     day.classList.add('selected-day'); // Adiciona a classe ao dia selecionado
 }
 
+// Função para confirmar o agendamento
 function confirmAgendamento() {
     const selectedDate = document.getElementById('datas-disponiveis').value;
     const selectedMonth = document.getElementById('mes').value;
     const selectedTime = document.getElementById('horarios').value;
     const selectedSpecialization = document.getElementById('especializacao').value;
 
+    // Verifica se todos os campos obrigatórios foram preenchidos
     if (!selectedDate || !selectedTime || !selectedSpecialization) {
         alert("Por favor, selecione uma data, horário e especialidade.");
         return;
@@ -101,9 +115,11 @@ function confirmAgendamento() {
     localStorage.setItem('selectedMonth', selectedMonth);
     localStorage.setItem('selectedSpecialization', selectedSpecialization);
 
-    window.location.href = 'tela-agendamento.html'; // Redireciona para a tela de agendamento
+    // Redireciona para a tela de agendamento
+    window.location.href = 'tela-agendamento.html'; 
 }
 
+// Função para alternar a exibição do chat
 function toggleChat() {
     const chatContainer = document.getElementById('chat-container');
     const chatBody = document.getElementById('chat-body');
@@ -115,6 +131,7 @@ function toggleChat() {
     chatBody.classList.toggle('hidden');
 }
 
+// Função para normalizar a entrada do usuário
 function normalizeInput(input) {
     const synonyms = {
         "cadastrar": ["cadastro", "castro", "cadastra", "cadrastra", "cadstro", "cadrastr", "cadastar", "cadstrar", "cadastr", "cadatro", "cadstro", "cadatro", "csdastro"],
@@ -131,6 +148,7 @@ function normalizeInput(input) {
         "hormonais": ["hormônio", "hormonoterapia", "hormonal", "hormônios", "endocrinologia", "terapia hormonal", "equilíbrio hormonal", "tratamento hormonal", "alterações hormonais"]
     };
 
+    // Divide a entrada em palavras e substitui sinônimos pela palavra normalizada
     let words = input.split(" ");
     return words.map(word => {
         for (const key in synonyms) {
@@ -142,22 +160,26 @@ function normalizeInput(input) {
     }).join(" ");
 }
 
+// Função para enviar uma mensagem no chat
 function sendMessage() {
     const chatInput = document.getElementById('chat-input');
-    const issue = chatInput.value.trim().toLowerCase();
-    const normalizedIssue = normalizeInput(issue);
+    const issue = chatInput.value.trim().toLowerCase(); // Captura a entrada do usuário
+    const normalizedIssue = normalizeInput(issue); // Normaliza a entrada
     const chatResponse = document.getElementById('chat-response');
 
+    // Se a entrada estiver vazia, não faz nada
     if (!normalizedIssue) return;
 
+    // Cria e exibe a mensagem do usuário no chat
     const userMessage = document.createElement('div');
     userMessage.classList.add('chat-message', 'user');
     userMessage.textContent = issue;
     chatResponse.appendChild(userMessage);
-    chatInput.value = '';
+    chatInput.value = ''; // Limpa o campo de entrada
 
-    let responseText = '';
+    let responseText = ''; // Inicializa a resposta do bot
 
+    // Respostas do bot baseadas na entrada normalizada
     if (normalizedIssue.includes('cadastrar') || normalizedIssue.includes('registrar')) {
         responseText = 'Para problemas de cadastro, por favor, verifique se você está utilizando o e-mail correto e se o formulário está preenchido corretamente. Se o problema persistir, entre em contato com o suporte técnico.';
     } else if (normalizedIssue.includes('preencher') || normalizedIssue.includes('feito') || normalizedIssue.includes('pronto')) {
@@ -190,6 +212,7 @@ function sendMessage() {
         responseText = 'Desculpe, não entendi. Pergunte sobre problemas de cadastro, problemas com senha, problemas de agendamento, menstruação, gravidez, saúde mental ou sintomas e eu vou tentar ajudar! 🤗';
     }
 
+    // Cria e exibe a mensagem de resposta do bot no chat
     const botMessage = document.createElement('div');
     botMessage.classList.add('chat-message', 'bot');
     botMessage.textContent = responseText;
