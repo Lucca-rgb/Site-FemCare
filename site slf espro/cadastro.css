@@ -1,108 +1,122 @@
+/* Define o estilo base do corpo da página */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('Layout branco3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
+    margin: 0; /* Remove margens padrão */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do texto */
+    background-image: url('Layout branco3.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Cobre todo o fundo com a imagem */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    display: flex; /* Usado para flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura do corpo como 100% da altura da janela */
+    position: relative; /* Define a posição relativa para elementos filhos */
 }
 
+/* Adiciona um fundo semi-transparente ao corpo */
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.356);
-    z-index: -1;
+    content: ""; /* Cria um elemento pseudo que não tem conteúdo */
+    position: absolute; /* Posiciona absolutamente em relação ao corpo */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona à esquerda */
+    width: 100%; /* Largura de 100% */
+    height: 100%; /* Altura de 100% */
+    background-color: rgba(255, 255, 255, 0.356); /* Cor de fundo branco com opacidade */
+    z-index: -1; /* Coloca o elemento atrás de outros */
 }
 
+/* Estilo do contêiner principal */
 .container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80vw;
-    max-width: 800px;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: auto;
-    margin: 0 auto;
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 80vw; /* Largura de 80% da largura da viewport */
+    max-width: 800px; /* Largura máxima de 800px */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
+/* Estilo do cabeçalho do contêiner */
 .header {
-    background-color: #f7aac6;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+    background-color: #f7aac6; /* Cor de fundo rosa */
+    color: #ffffff; /* Cor do texto branca */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px 8px 0 0; /* Bordas arredondadas no topo */
+    text-align: center; /* Centraliza o texto */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
 }
+
+/* Estilo do formulário */
 form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: grid; /* Usado para layout em grid */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de largura igual */
+    gap: 10px; /* Espaço entre os elementos do grid */
 }
 
+/* Estilo do grupo de formulário */
 .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+    display: flex; /* Usado para layout flexível */
+    flex-direction: column; /* Coloca os itens em coluna */
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
+/* Estilo do rótulo do grupo de formulário */
 .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: bold; /* Texto em negrito */
+    margin-bottom: 5px; /* Espaçamento inferior */
 }
 
+/* Estilo dos inputs do formulário */
 .form-group input {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
+/* Estilo dos botões do formulário */
 .form-group button {
-    background-color: #f7aac6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    margin-left: 190px;
+    background-color: #f7aac6; /* Cor de fundo rosa */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão */
+    width: 100%; /* Largura total */
+    margin-top: 10px; /* Espaçamento superior */
+    margin-left: 190px; /* Espaçamento à esquerda */
 }
 
+/* Estilo do botão ao passar o mouse */
 .form-group button:hover {
-    background-color: #d8a2b1;
+    background-color: #d8a2b1; /* Cor de fundo rosa mais escuro */
 }
 
+/* Estilo do botão de voltar */
 .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #f8c6d8;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    text-decoration: none;
+    position: absolute; /* Posiciona absolutamente */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    background-color: #f8c6d8; /* Cor de fundo rosa claro */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão */
+    text-decoration: none; /* Remove sublinhado */
 }
 
+/* Estilo do botão de voltar ao passar o mouse */
 .back-button:hover {
-    background-color: #d8a2b1;
+    background-color: #d8a2b1; /* Cor de fundo rosa mais escuro */
 }
 
+/* Estilo do contêiner de chat */
 .chat-container {
     position: fixed; /* Fixa o chat na tela */
     bottom: 20px; /* Distância do fundo da tela */
@@ -110,89 +124,101 @@ form {
     width: 80px; /* Largura inicial do chat circular */
     height: 80px; /* Altura inicial do chat circular */
     border-radius: 50%; /* Formato circular */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa */
     background-color: #f7aac6; /* Cor do cabeçalho */
     transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease; /* Transição suave */
 }
 
+/* Estilo do contêiner de chat expandido */
 .chat-container.expanded {
     width: 400px; /* Largura quando expandido */
     height: 500px; /* Altura quando expandido */
     border-radius: 10px; /* Bordas arredondadas quando expandido */
 }
 
+/* Estilo para ocultar elementos */
 .hidden {
     display: none; /* Oculta o elemento */
 }
 
-
+/* Estilo do cabeçalho do chat */
 .chat-header {
-    background-color: #f7aac6;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
+    background-color: #f7aac6; /* Cor de fundo rosa */
+    color: white; /* Cor do texto branca */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilo do corpo do chat */
 .chat-body {
     background-color: white; /* Fundo branco */
-    padding: 10px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
+    padding: 10px; /* Espaçamento interno */
+    height: 400px; /* Altura do corpo do chat */
+    display: flex; /* Usado para flexbox */
+    flex-direction: column; /* Coloca os itens em coluna */
 }
 
+/* Estilo da área de resposta do chat */
 .chat-response {
-    flex: 1;
-    overflow-y: auto; /* Adiciona rolagem */
+    flex: 1; /* Permite que a área de resposta ocupe o espaço restante */
+    overflow-y: auto; /* Adiciona rolagem vertical */
     background-color: #E0BBE4; /* Fundo roxo para as mensagens */
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
+/* Estilo das mensagens do chat */
 .chat-message {
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 80%;
+    margin: 5px 0; /* Margem superior e inferior */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    max-width: 80%; /* Largura máxima de 80% */
 }
 
+/* Estilo das mensagens do bot */
 .chat-message.bot {
     background-color: #E0E0E0; /* Fundo para mensagens do bot */
-    align-self: flex-start;
+    align-self: flex-start; /* Alinha à esquerda */
 }
 
+/* Estilo das mensagens do usuário */
 .chat-message.user {
     background-color: #c390e2; /* Roxo suave para mensagens do usuário */
-    align-self: flex-end;
+    align-self: flex-end; /* Alinha à direita */
 }
 
+/* Estilo do contêiner de entrada do chat */
 .chat-input-container {
-    display: flex;
+    display: flex; /* Usado para layout flexível */
     margin-top: auto; /* Para posicionar na parte inferior */
 }
 
+/* Estilo do campo de entrada do chat */
 .chat-input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #e46d6d;
-    border-radius: 5px;
+    flex: 1; /* Ocupa o espaço restante */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #e46d6d; /* Borda vermelha */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
+/* Estilo do botão de envio */
 .send-button {
     background-color: #ee99b8; /* Rosa pastel */
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor em forma de mão */
     color: white; /* Texto branco no botão */
 }
 
+/* Estilo do botão de envio ao passar o mouse */
 .send-button:hover {
     background-color: #db859d; /* Cor do botão ao passar o mouse */
 }
 
+/* Estilo para ocultar elementos */
 .hidden {
     display: none; /* Oculta o elemento */
 }
