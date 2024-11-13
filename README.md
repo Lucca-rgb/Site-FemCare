@@ -74,5 +74,5 @@
 
 ## Authors /  Autores
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/176588930?v=4" width=115><br><sub>Mariana Torres</sub>](https://github.com/Mariana-rgb) |
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/176588930?v=4" width=115><br><sub>Lucca Torres</sub>](https://github.com/Lucca-rgb) |
 | :---: |
