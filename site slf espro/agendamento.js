@@ -1,4 +1,4 @@
-// Adiciona um listener para o evento de submit no formulário de agendamento
+/ Adiciona um listener para o evento de submit no formulário de agendamento
 document.getElementById('appointment-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Previne o comportamento padrão de recarregar a página ao enviar o formulário
 
