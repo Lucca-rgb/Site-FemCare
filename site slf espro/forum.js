@@ -1,4 +1,4 @@
-onst users = ['maria', 'ana', 'clara'];
+const users = ['maria', 'ana', 'clara'];
 let userIndex = 0;
 
 const synonyms = {
