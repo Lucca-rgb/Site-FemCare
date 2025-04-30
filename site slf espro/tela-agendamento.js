@@ -1,4 +1,4 @@
-et currentDate = new Date();
+let currentDate = new Date();
 
 function renderCalendar() {
     const calendarBody = document.getElementById('calendar-body');
