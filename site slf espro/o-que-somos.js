@@ -1,4 +1,4 @@
-function toggleChat() {
+unction toggleChat() {
     const chatContainer = document.getElementById('chat-container');
     const chatBody = document.getElementById('chat-body');
 
