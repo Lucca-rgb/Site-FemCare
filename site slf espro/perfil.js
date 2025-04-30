@@ -1,4 +1,4 @@
-unction openHelp() {
+function openHelp() {
     document.getElementById('help-modal').style.display = 'block';
 }
 
