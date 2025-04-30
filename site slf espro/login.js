@@ -1,4 +1,4 @@
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+ocument.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita o envio do formulário
 
     // Coletar dados do formulário
